@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.author        = 'Anton Morozov'
   spec.email         = 'pruinis@gmail.com'
 
-  spec.summary       = 'Helps to download build from HockeyApp'
-  # spec.homepage      = "https://github.com/<GITHUB_USERNAME>/fastlane-plugin-download_hocky_build"
+  spec.summary       = 'Download builds from HockeyApp (iOS and Android)'
+  spec.homepage      = "https://github.com/pruinis/fastlane-plugin-download_hocky_build"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
@@ -22,6 +22,9 @@ Gem::Specification.new do |spec|
   # since this would cause a circular dependency
 
   # spec.add_dependency 'your-dependency', '~> 1.0.0'
+
+  spec.add_dependency 'faraday', '~> 0.12.1'
+  spec.add_dependency 'faraday_middleware', '~> 0.11.0.1'
 
   spec.add_development_dependency('pry')
   spec.add_development_dependency('bundler')
