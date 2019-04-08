@@ -8,11 +8,9 @@ require_relative '../helper/download_hocky_build_helper'
 module Fastlane
   module Actions
     class DownloadHockyBuildAction < Action
-        HOST_NAME = 'https://rink.hockeyapp.net'
 
         def self.run(params)
             UI.message("The download_hocky_build plugin is working!")
-
             api_token = params[:api_token]
             app_id = params[:app_id]
             output_directory = params[:output_directory]
@@ -24,7 +22,8 @@ module Fastlane
     
   
         def self.connection(api_token)
-            Faraday.new(:url => HOST_NAME) do |faraday|
+            host_url = 'https://rink.hockeyapp.net'
+            Faraday.new(:url => host_url) do |faraday|
                 faraday.request  :multipart
                 faraday.request  :url_encoded
                 faraday.adapter  Faraday.default_adapter
@@ -116,7 +115,7 @@ module Fastlane
 
 
       def self.description
-        "Helps to download builds from HockeyApp (iOS and Android)"
+        "Download newest build from HockeyApp (iOS & Android)"
       end
 
       def self.authors

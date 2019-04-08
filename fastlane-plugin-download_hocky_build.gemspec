@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.author        = 'Anton Morozov'
   spec.email         = 'pruinis@gmail.com'
 
-  spec.summary       = 'Download builds from HockeyApp (iOS and Android)'
+  spec.summary       = 'Download newest build from HockeyApp (iOS & Android)'
   spec.homepage      = "https://github.com/pruinis/fastlane-plugin-download_hocky_build"
   spec.license       = "MIT"
 

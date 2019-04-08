@@ -12,7 +12,7 @@ fastlane add_plugin download_hocky_build
 
 ## About download_hocky_build
 
-Helps to download build from HockeyApp
+Download newest build from HockeyApp (iOS & Android)
 
 **Note to author:** Add a more detailed description about this plugin here. If your plugin contains multiple actions, make sure to mention them here.
 
