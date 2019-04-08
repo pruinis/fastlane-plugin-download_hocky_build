@@ -23,8 +23,8 @@ Gem::Specification.new do |spec|
 
   # spec.add_dependency 'your-dependency', '~> 1.0.0'
 
-  spec.add_dependency 'faraday', '~> 0.12.1'
-  spec.add_dependency 'faraday_middleware', '~> 0.11.0.1'
+  spec.add_dependency 'faraday', '~> 0.15.4'
+  spec.add_dependency 'faraday_middleware', '~> 0.13.1'
 
   spec.add_development_dependency('pry')
   spec.add_development_dependency('bundler')
