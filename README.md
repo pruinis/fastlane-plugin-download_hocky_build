@@ -20,7 +20,16 @@ Download newest build from HockeyApp (iOS & Android)
 
 Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins` and `bundle exec fastlane test`.
 
-**Note to author:** Please set up a sample project to make it easy for users to explore what your plugin does. Provide everything that is necessary to try out the plugin in this project (including a sample Xcode/Android project if necessary)
+```
+download_hocky_build(
+    api_token: "abc1234defg",           # API Token
+    app_id: "1234abcdefg",              # App ID
+    output_directory: "~/Desktop",      # Path to local build folder
+    output_file: "ios.ipa",             # Downloaded build name *.ipa or *.apk
+    output_info_file: "BuildInfo.json"  # json with details about downloaded build
+)
+```
+
 
 ## Run tests for this plugin
 

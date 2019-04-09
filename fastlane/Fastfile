@@ -1,3 +1,17 @@
 lane :test do
-  download_hocky_build
+
+    api_token='9erer3ogide3ji59ce8fiincac74afvrc'
+    app_id='4148458envh567lfte3n022e56021fed77'
+    output_directory='./fastlane/Builds'
+    output_file='ios.ipa'
+    output_info_file='HockyAppBuildInfo.json'
+
+    download_hocky_build(
+        api_token: api_token,
+        app_id: app_id,
+        output_directory: output_directory,
+        output_file: output_file,
+        output_info_file: output_info_file
+    )
+
 end

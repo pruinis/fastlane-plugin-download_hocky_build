@@ -1,3 +1,6 @@
+#!/bin/env ruby
+# encoding: utf-8
+
 require 'fastlane/action'
 require 'faraday'
 require 'faraday_middleware'
