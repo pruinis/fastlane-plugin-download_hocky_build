@@ -4,6 +4,7 @@
 require 'fastlane/action'
 require 'faraday'
 require 'faraday_middleware'
+require 'fileutils'
 require 'json'
 
 require_relative '../helper/download_hocky_build_helper'
@@ -89,7 +90,7 @@ module Fastlane
 
 
         def self.storeBuildInfo(version, output_directory, output_info_file)
-            Dir.mkdir(output_directory) unless File.exists?(output_directory)
+            FileUtils.mkdir_p(output_directory) unless File.exist?(output_directory)
             path = File.join(output_directory, output_info_file)
             File.open(path,"w") do |f|
                 f.write(version)
@@ -106,7 +107,7 @@ module Fastlane
 
             UI.success "Start to download the build file, which may take a minute"
 
-            Dir.mkdir(output_directory) unless File.exists?(output_directory)
+            FileUtils.mkdir_p(output_directory) unless File.exist?(output_directory)
             path = File.join(output_directory, output_file)
             File.open(path, "wb") do |saved_file|
                 open(build_url, "rb") do |read_file|
